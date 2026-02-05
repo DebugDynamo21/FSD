@@ -1,0 +1,140 @@
+<!-- Create a“ registration form“ with the following fields
+1)Name (Text field)
+2)Password (password field)
+3) E-mailid(text field)
+4) Phone Number(text field)
+5) Sex(radio button)
+6) Date of birth(3 select boxes)
+7) Languages known(checkboxes–English, Telugu, Hindi, Tamil)
+8) Address(text area) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="">
+    <title>Registration-Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Registration-Page -->
+    <div class="wrapper" id="formContainer">
+        <div class="register-form">
+            <h2>Register</h2>
+            <form>
+                <fieldset>
+                    <legend>Personal Details</legend>
+              
+                    <label for="fname"><strong>First Name:</strong></label>
+                    <input type="text" id="fname" name="fname" required><br><br>
+              
+                    <label for="lname"><strong>Last Name:</strong></label>
+                    <input type="text" id="lname" name="lname" required><br><br>
+              
+                    <label for="age"><strong>Age:</strong></label>
+                    <input type="number" id="age" name="age" min="1" required><br><br>
+              
+                    <label for="dob"><strong>Date of Birth:</strong></label>
+                    <input type="date" id="dob" name="dob" placeholder="DD/MM/YYYY" required><br><br>
+              
+                    <label><strong>Gender:</strong></label><br>
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male" style="display:inline;">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female" style="display:inline;">Female</label>
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other" style="display:inline;">Other</label><br>
+              
+                    <br>
+
+                    <label><strong>Languages Known:</strong></label><br>
+
+                    <input type="radio" id="english" name="language" value="English">
+                    <label for="english">English</label><br>
+                    
+                    <input type="radio" id="telugu" name="language" value="Telugu">
+                    <label for="telugu">Telugu</label><br>
+                    
+                    <input type="radio" id="hindi" name="language" value="Hindi">
+                    <label for="hindi">Hindi</label><br>
+                    
+                    <input type="radio" id="tamil" name="language" value="Tamil">
+                    <label for="tamil">Tamil</label><br>
+
+                    <input type="checkbox" id="Bengla" name="languages" value="Bengla">
+                    <label for="Bengla">Bengla</label><br>
+                  </fieldset>
+                <fieldset>
+                    <legend><strong>Contact Details</strong></legend>
+                    <label for="phn-number">Contact Number:</label><br>
+                    <input type="text" placeholder="e.g. 9876543210" id="contact" name="contact" maxlength="10" pattern="\d{10}" required/><br>
+                
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" placeholder="e.g. examplemail@gmail.com" required><br><br>
+                </fieldset>
+                
+                <fieldset>
+                    <legend><strong>Address Details</strong></legend>
+                  
+                    <label for="house">House/Flat No.:</label><br>
+                    <input type="text" id="house" name="house" placeholder="e.g. Flat No. 12B" required><br><br>
+                  
+                    <label for="street">Street/Area/Region:</label><br>
+                    <input type="text" id="street" name="street" placeholder="e.g. MG Road" required><br><br>
+                  
+                    <label for="city">City:</label><br>
+                    <input type="text" id="city" name="city" placeholder="e.g. Hyderabad" required><br><br>
+                  
+                    <label for="district">District:</label><br>
+                    <input type="text" id="district" name="district" placeholder="e.g. Ranga Reddy" required><br><br>
+                  
+                    <label for="state">State:</label><br>
+                    <select id="state" name="state" required>
+                      <option value="">--Select State--</option>
+                      <option value="Andhra Pradesh">Andhra Pradesh</option>
+                      <option value="Telangana">Telangana</option>
+                      <option value="Tamil Nadu">Tamil Nadu</option>
+                      <option value="Karnataka">Karnataka</option>
+                      <option value="Maharashtra">Maharashtra</option>
+                      <option value="Kerala">Kerala</option>
+                      <option value="Delhi">Delhi</option>
+                      <option value="Other">Other</option>
+                    </select><br><br>
+                  
+                    <label for="country">Country:</label><br>
+                    <select id="country" name="country" required>
+                      <option value="">--Select Country--</option>
+                      <option value="India">India</option>
+                      <option value="United States">United States</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Canada">Canada</option>
+                      <option value="Other">Other</option>
+                    </select><br><br>
+                  
+                    <label for="extra">Landmark / Additional Info (optional):</label><br>
+                    <textarea id="extra" name="extra" rows="3" cols="40" placeholder="Near park, behind school, etc."></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend><strong>Submit</strong></legend>
+              
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required><br><br>
+              
+                    <label for="confirmPassword">Confirm Password:</label><br>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+              
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms" class="checkbox-label">I accept the Terms & Conditions</label>
+              
+                    <br>
+                    <input type="submit" value="Final Submit">
+                  </fieldset>
+              
+            </form>
+        </div>
+    </div>
+</body>
+</html>

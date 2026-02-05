@@ -1,0 +1,25 @@
+<!-- Add responsiveness in webpage so that the div element created to hide when width is 800px. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        div.example{
+            background-color: yellow;
+            padding: 20px;
+        }
+        @media screen and (max-width: 800px){
+            div.example{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="example">
+        <p>Hello World! I am HTML Language.</p>
+    </div>
+</body>
+</html>

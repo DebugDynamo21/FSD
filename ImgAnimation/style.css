@@ -1,0 +1,33 @@
+body{
+    background-color: #326b8c;
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    font-family:'Courier New', Courier, monospace;
+    color: #fff;
+    text-shadow: 10px 10px 20px black;
+}
+
+.round-img{
+    border-radius: 100%;
+    height: 70vh;
+    width: 70vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 20px black;
+    position: relative;
+    animation: moveX 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes moveX {
+  from {
+    transform: translateX(-200);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+

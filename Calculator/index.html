@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator">
+        <h2 class="heading">C A S I O</h2>
+        <input type="text" id="result" class="output" placeholder="0">
+        <div class="keys">
+            <input type="button" value="+" class="key key-op" onclick="display('+')">
+            <input type="button" value="-" class="key key-op" onclick="display('-')">
+            <input type="button" value="*" class="key key-op" onclick="display('*')">
+            <input type="button" value="/" class="key key-op" onclick="display('/')">
+            <input type="button" value="7" class="key" onclick="display('7')">
+            <input type="button" value="8" class="key" onclick="display('8')">
+            <input type="button" value="9" class="key" onclick="display('9')">
+            <input type="button" value="4" class="key" onclick="display('4')">
+            <input type="button" value="5" class="key" onclick="display('5')">
+            <input type="button" value="6" class="key" onclick="display('6')">
+            <input type="button" value="1" class="key" onclick="display('1')">
+            <input type="button" value="2" class="key" onclick="display('2')">
+            <input type="button" value="3" class="key" onclick="display('3')">
+            <input type="button" value="." class="key" onclick="display('.')">
+            <input type="button" value="0" class="key" onclick="display('0')">
+            <input type="button" value="C" class="key" onclick="clearScreen()">
+            <input type="button" value="=" class="key key-equal" onclick="solve()">
+        </div>
+    </div>
+</body>
+</html>

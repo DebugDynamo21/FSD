@@ -279,7 +279,6 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: violet;
 }
 .music-controller{
     display: flex;
@@ -289,15 +288,56 @@ nav{
 }
 .music-player{
     display: flex;
+    align-items: center;
 }
 
-.player-btn{
+.player-btns{
     font-size: 1.1rem;
     margin: 0.4rem 1rem;
     color: rgb(190, 190, 190);
     cursor: pointer;
 }
-.player-btn:hover{
+.player-btns:hover{
     transform: scale(1.02);
     color: rgb(232, 232, 232);
+}
+#play{
+    font-size: 2.5rem;
+    color: white;
+}
+#progressBar{
+    appearance: none;
+    width: 600px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type='range']::-webkit-slider-thumb{
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.current-play{
+    display: flex;
+    color: white;
+    align-items: center;
+}
+.player-bar img{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    padding: 0.3rem;
+}
+.img-title-info{
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+.img-des-info{
+    font-size: 0.8rem;
+    color: rgb(192, 192, 192);
+    margin-left: 1rem;
 }

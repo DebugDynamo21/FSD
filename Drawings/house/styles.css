@@ -1,0 +1,831 @@
+/* =========================================
+   BASIC RESET
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+
+/* =========================================
+   ILLUSTRATED BACKGROUND
+   ========================================= */
+
+.scene {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #a9dcf5 0%,
+            #ccecfb 62%,
+            #75bd62 62%,
+            #4e9d48 100%
+        );
+}
+
+
+/* =========================================
+   SUN
+   ========================================= */
+
+.sun {
+    position: absolute;
+    top: 65px;
+    right: 13%;
+    width: 85px;
+    height: 85px;
+
+    background: #ffe28a;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 12px rgba(255, 226, 138, 0.15),
+        0 0 45px rgba(255, 214, 87, 0.45);
+}
+
+
+/* =========================================
+   CLOUDS
+   ========================================= */
+
+.cloud {
+    position: absolute;
+    width: 145px;
+    height: 45px;
+}
+
+.cloud span {
+    position: absolute;
+    display: block;
+    background: rgba(255, 255, 255, 0.82);
+    border-radius: 50%;
+}
+
+.cloud span:nth-child(1) {
+    width: 60px;
+    height: 45px;
+    left: 10px;
+    bottom: 0;
+}
+
+.cloud span:nth-child(2) {
+    width: 75px;
+    height: 60px;
+    left: 40px;
+    bottom: 0;
+}
+
+.cloud span:nth-child(3) {
+    width: 50px;
+    height: 40px;
+    right: 5px;
+    bottom: 0;
+}
+
+.cloud-1 {
+    top: 100px;
+    left: 8%;
+    transform: scale(0.9);
+}
+
+.cloud-2 {
+    top: 170px;
+    right: 7%;
+    transform: scale(0.65);
+}
+
+
+/* =========================================
+   BACKGROUND TREE
+   ========================================= */
+
+.tree {
+    position: absolute;
+    bottom: 35%;
+    left: 7%;
+    width: 125px;
+    height: 190px;
+}
+
+.tree-trunk {
+    position: absolute;
+    bottom: 0;
+    left: 52px;
+    width: 25px;
+    height: 105px;
+
+    background: #765039;
+    border-radius: 40% 50% 10% 15%;
+
+    transform: rotate(2deg);
+}
+
+.tree-leaves {
+    position: absolute;
+
+    background: #397d43;
+    border-radius: 48% 52% 45% 55%;
+
+    box-shadow:
+        inset 12px -10px 0 rgba(30, 91, 43, 0.18);
+}
+
+.leaf-1 {
+    width: 95px;
+    height: 105px;
+    left: 10px;
+    top: 20px;
+}
+
+.leaf-2 {
+    width: 90px;
+    height: 90px;
+    left: 35px;
+    top: 0;
+}
+
+.leaf-3 {
+    width: 85px;
+    height: 90px;
+    left: 45px;
+    top: 45px;
+}
+
+
+/* =========================================
+   HOUSE
+   ========================================= */
+
+#house {
+    position: absolute;
+
+    width: 540px;
+    height: 410px;
+
+    left: 50%;
+    bottom: 34%;
+
+    transform: translateX(-50%);
+
+    background: #f3ad8c;
+
+    border: 7px solid #7b4028;
+
+    border-radius:
+        3px
+        5px
+        2px
+        4px;
+
+    box-shadow:
+        0 22px 25px rgba(54, 71, 42, 0.28),
+        0 5px 0 #643622;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   CHIMNEY
+   ========================================= */
+
+#chimney {
+    position: absolute;
+
+    top: -105px;
+    right: 72px;
+
+    width: 72px;
+    height: 135px;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #a86d55 0px,
+            #a86d55 17px,
+            #8d5542 18px,
+            #8d5542 21px
+        );
+
+    border: 6px solid #683d30;
+
+    z-index: -1;
+
+    transform: rotate(-1deg);
+}
+
+.chimney-top {
+    position: absolute;
+
+    top: -10px;
+    left: -9px;
+
+    width: 80px;
+    height: 15px;
+
+    background: #754334;
+    border: 4px solid #5e362b;
+
+    border-radius: 4px;
+}
+
+.smoke {
+    position: absolute;
+
+    background: rgba(255, 255, 255, 0.42);
+    border-radius: 50%;
+}
+
+.smoke-1 {
+    width: 28px;
+    height: 28px;
+    top: -65px;
+    left: 20px;
+}
+
+.smoke-2 {
+    width: 20px;
+    height: 20px;
+    top: -85px;
+    left: 39px;
+}
+
+
+/* =========================================
+   ROOF
+   ========================================= */
+
+#roof {
+    position: absolute;
+
+    top: -88px;
+    left: -30px;
+
+    width: 594px;
+    height: 145px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a34f38 25%,
+            #713c32 26%,
+            #713c32 48%,
+            #a34f38 49%,
+            #a34f38 73%,
+            #713c32 74%
+        );
+
+    background-size: 48px 48px;
+
+    border: 8px solid #613329;
+
+    clip-path: polygon(
+        0 100%,
+        11% 45%,
+        20% 45%,
+        28% 25%,
+        50% 0,
+        72% 25%,
+        80% 45%,
+        89% 45%,
+        100% 100%
+    );
+
+    box-shadow:
+        0 8px 0 #4e2c26;
+
+    z-index: 2;
+}
+
+
+/* Hand-drawn roof highlight */
+
+#roof::after {
+    content: "";
+
+    position: absolute;
+
+    left: 70px;
+    right: 70px;
+    bottom: 16px;
+
+    height: 7px;
+
+    background: rgba(255, 190, 150, 0.3);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   ATTIC WINDOW
+   ========================================= */
+
+.attic-window {
+    position: absolute;
+
+    top: -58px;
+    left: 220px;
+
+    width: 82px;
+    height: 65px;
+
+    background: #f6d88d;
+
+    border: 6px solid #65392d;
+
+    border-radius: 50% 50% 4px 4px;
+
+    z-index: 4;
+}
+
+.attic-glass {
+    position: absolute;
+
+    inset: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a9dbea,
+            #4c9bb0
+        );
+
+    border-radius: 50% 50% 0 0;
+}
+
+.attic-cross {
+    position: absolute;
+
+    left: 50%;
+    top: 7px;
+
+    width: 5px;
+    height: 48px;
+
+    background: #65392d;
+
+    transform: translateX(-50%);
+}
+
+
+/* =========================================
+   WINDOWS
+   ========================================= */
+
+#window-1,
+#window-2 {
+    position: absolute;
+
+    top: 125px;
+
+    width: 115px;
+    height: 105px;
+
+    background: #71402d;
+
+    border: 7px solid #6b3c2b;
+
+    box-shadow:
+        5px 7px 0 rgba(91, 51, 38, 0.18);
+
+    z-index: 4;
+}
+
+#window-1 {
+    left: 45px;
+    transform: rotate(-1deg);
+}
+
+#window-2 {
+    right: 45px;
+    transform: rotate(1deg);
+}
+
+.window-glass {
+    position: absolute;
+
+    inset: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #bdeaf0,
+            #75c0d0 55%,
+            #4f9fb2
+        );
+
+    overflow: hidden;
+}
+
+.window-shine {
+    position: absolute;
+
+    width: 35px;
+    height: 75px;
+
+    top: -15px;
+    left: 10px;
+
+    background: rgba(255,255,255,0.3);
+
+    transform: rotate(25deg);
+}
+
+.window-cross {
+    position: absolute;
+    background: #6b3c2b;
+    z-index: 2;
+}
+
+.window-cross.vertical {
+    width: 6px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.window-cross.horizontal {
+    height: 6px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* =========================================
+   FLOWER BOXES
+   ========================================= */
+
+.flower-box {
+    position: absolute;
+
+    bottom: -28px;
+    left: -10px;
+
+    width: 120px;
+    height: 30px;
+
+    background: #8d4e30;
+
+    border: 4px solid #643728;
+
+    border-radius: 3px;
+
+    text-align: center;
+    line-height: 20px;
+
+    z-index: 5;
+
+    box-shadow: 0 4px 5px rgba(0,0,0,0.18);
+}
+
+.flower-box span {
+    position: relative;
+    top: -17px;
+    font-size: 20px;
+}
+
+
+/* =========================================
+   DOOR
+   ========================================= */
+
+#door {
+    position: absolute;
+
+    bottom: 0;
+    left: 202px;
+
+    width: 136px;
+    height: 230px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #74452e,
+            #99613e 50%,
+            #75442f
+        );
+
+    border: 8px solid #603a2b;
+
+    border-bottom: none;
+
+    border-radius: 7px 7px 0 0;
+
+    box-shadow:
+        inset 5px 0 rgba(255,255,255,0.08),
+        inset -5px 0 rgba(0,0,0,0.1);
+
+    z-index: 6;
+}
+
+
+/* Door panels */
+
+.door-panel {
+    position: absolute;
+
+    left: 15px;
+    width: 90px;
+
+    border: 5px solid #5c3729;
+
+    background: rgba(190, 125, 82, 0.25);
+
+    border-radius: 3px;
+}
+
+.panel-top {
+    top: 18px;
+    height: 80px;
+}
+
+.panel-bottom {
+    top: 112px;
+    height: 93px;
+}
+
+
+/* Door handle */
+
+#door-handle {
+    position: absolute;
+
+    right: 12px;
+    top: 120px;
+
+    width: 17px;
+    height: 17px;
+
+    background: #e5b75e;
+
+    border: 3px solid #9b672b;
+
+    border-radius: 50%;
+
+    box-shadow:
+        1px 2px 0 #4f3026;
+}
+
+
+/* =========================================
+   DOOR WREATH
+   ========================================= */
+
+.door-wreath {
+    position: absolute;
+
+    top: 28px;
+    right: 24px;
+
+    width: 43px;
+    height: 43px;
+
+    border: 7px solid #477442;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    transform: rotate(-10deg);
+}
+
+.door-wreath span {
+    position: absolute;
+}
+
+.door-wreath span:first-child {
+    top: -16px;
+    left: 5px;
+}
+
+.door-wreath span:last-child {
+    bottom: -12px;
+    right: -8px;
+}
+
+
+/* =========================================
+   PORCH LIGHT
+   ========================================= */
+
+.porch-light {
+    position: absolute;
+
+    right: -28px;
+    top: 25px;
+
+    width: 23px;
+    height: 32px;
+
+    background: #f9d26b;
+
+    border: 5px solid #593529;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 18px #ffd76e,
+        0 0 35px rgba(255, 214, 100, 0.5);
+}
+
+
+/* =========================================
+   FRONT STEPS
+   ========================================= */
+
+.steps {
+    position: absolute;
+
+    left: 178px;
+
+    height: 16px;
+
+    background: #a98772;
+
+    border: 4px solid #6b5549;
+
+    border-radius: 3px;
+
+    z-index: 5;
+}
+
+.step-1 {
+    width: 180px;
+    bottom: -22px;
+    left: 172px;
+}
+
+.step-2 {
+    width: 215px;
+    bottom: -39px;
+    left: 155px;
+}
+
+
+/* =========================================
+   GARDEN
+   ========================================= */
+
+.garden {
+    position: absolute;
+
+    bottom: 32%;
+
+    font-size: 30px;
+
+    z-index: 8;
+
+    filter: drop-shadow(0 4px 2px rgba(0,0,0,0.15));
+}
+
+.garden-left {
+    left: calc(50% - 330px);
+}
+
+.garden-right {
+    right: calc(50% - 330px);
+}
+
+
+/* =========================================
+   WELCOME MAT
+   ========================================= */
+
+.carpet {
+    position: absolute;
+
+    left: 50%;
+    bottom: calc(34% - 80px);
+
+    width: 155px;
+    height: 48px;
+
+    transform:
+        translateX(-50%)
+        skewX(-14deg)
+        rotate(-1deg);
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #477b4a,
+            #477b4a 4px,
+            #568d58 4px,
+            #568d58 8px
+        );
+
+    border: 4px solid #4d392d;
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 6px 5px rgba(0,0,0,0.25);
+
+    z-index: 12;
+
+    text-align: center;
+}
+
+.carpet span {
+    display: block;
+
+    transform: skewX(14deg);
+
+    color: #fff5d6;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    line-height: 40px;
+
+    text-shadow:
+        1px 1px 0 #315834;
+}
+
+
+/* =========================================
+   LITTLE HAND-DRAWN DETAILS
+   ========================================= */
+
+#house::before {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    right: 8px;
+    top: 8px;
+
+    height: 4px;
+
+    background: rgba(255,255,255,0.18);
+
+    border-radius: 50%;
+
+    transform: rotate(-0.5deg);
+}
+
+#house::after {
+    content: "";
+
+    position: absolute;
+
+    left: 30px;
+    right: 30px;
+    bottom: 7px;
+
+    height: 4px;
+
+    background: rgba(111, 54, 37, 0.16);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    #house {
+        transform: translateX(-50%) scale(0.78);
+        transform-origin: bottom center;
+    }
+
+    .tree {
+        left: -25px;
+        transform: scale(0.7);
+    }
+
+    .garden-left {
+        left: 5%;
+    }
+
+    .garden-right {
+        right: 5%;
+    }
+
+    .carpet {
+        bottom: calc(34% - 60px);
+    }
+}

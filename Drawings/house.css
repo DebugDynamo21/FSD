@@ -1,0 +1,201 @@
+/* =========================
+   SCENE
+   ========================= */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgb(190, 229, 252) 0%,
+    rgb(190, 229, 252) 65%,
+    green 65%,
+    green 100%
+  );
+}
+
+
+/* =========================
+   MAIN HOUSE
+   ========================= */
+
+#house {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  border: 6px solid rgb(168, 94, 33);
+  background-color: rgb(241, 158, 134);
+  box-sizing: border-box;
+
+  /* Center the house */
+  margin: 250px auto 0;
+}
+
+
+/* =========================
+   CHIMNEY
+   ========================= */
+
+#chimney {
+  position: absolute;
+  top: -140px;
+  right: 75px;
+  width: 90px;
+  height: 125px;
+  border: 5px solid black;
+  background-color: rgb(230, 230, 230);
+  z-index: -1;
+}
+
+.chimney-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.chimney-lines div {
+  height: 14px;
+  border-bottom: 3px solid rgb(90, 90, 90);
+}
+
+.line-1 {
+  margin-top: 12px;
+}
+
+.line-2,
+.line-3,
+.line-4,
+.line-5,
+.line-6 {
+  margin-top: 3px;
+}
+
+
+/* =========================
+   ROOF
+   ========================= */
+
+#roof {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 488px;
+  height: 105px;
+  background-color: rgb(241, 158, 134);
+  border: 1px solid rgb(168, 94, 33);
+  box-sizing: border-box;
+}
+
+.roof-lines {
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(
+      45deg,
+      transparent 42%,
+      rgb(168, 94, 33) 43%,
+      rgb(168, 94, 33) 57%,
+      transparent 58%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 42%,
+      rgb(168, 94, 33) 43%,
+      rgb(168, 94, 33) 57%,
+      transparent 58%
+    );
+  background-size: 34px 34px;
+}
+
+
+/* =========================
+   WINDOW 1
+   ========================= */
+
+#window-1 {
+  position: absolute;
+  top: 145px;
+  left: 35px;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 255, 188);
+  border: 6px solid rgb(168, 94, 33);
+}
+
+#window-1-line {
+  position: absolute;
+  top: 0;
+  left: 47px;
+  border: 2px solid rgb(168, 94, 33);
+  height: 100px;
+}
+
+
+/* =========================
+   WINDOW 2
+   ========================= */
+
+#window-2 {
+  position: absolute;
+  top: 145px;
+  right: 35px;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 255, 188);
+  border: 6px solid rgb(168, 94, 33);
+}
+
+#window-2-line {
+  position: absolute;
+  top: 0;
+  left: 47px;
+  border: 2px solid rgb(168, 94, 33);
+  height: 100px;
+}
+
+
+/* =========================
+   DOOR
+   ========================= */
+
+#door {
+  position: absolute;
+  bottom: 0;
+  left: 185px;
+  height: 190px;
+  width: 125px;
+  border: 6px solid rgb(168, 94, 33);
+  background-color: rgb(230, 230, 230);
+}
+
+#door-handle {
+  position: absolute;
+  top: 90px;
+  left: 100px;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(168, 94, 33);
+  border-radius: 50%;
+}
+
+
+/* =========================
+   WELCOME MAT
+   ========================= */
+
+.carpet {
+  position: relative;
+  margin: 5px auto 0;
+  width: 120px;
+  height: 35px;
+  border: 3px solid black;
+  background: lightgreen;
+
+  /* Parallelogram shape */
+  transform: skewX(-15deg);
+
+  font-size: 0.9em;
+  font-weight: 600;
+  text-align: center;
+  line-height: 35px;
+}
